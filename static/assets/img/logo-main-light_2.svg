@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="148" height="30" fill="none" viewBox="0 0 148 30">
+  <defs>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel&amp;display=swap');
+    </style>
+  </defs>
+  <text 
+    x="10" 
+    y="25" 
+    fill="#fff" 
+    font-family="Cinzel" 
+    font-size="29" 
+    font-weight="normal"
+    letter-spacing="1"
+  >
+    BELOVED
+  </text>
+  <path fill="#BFABCD" d="M45.77 15.104c0 1.664.915 3.578 3.703 3.578 2.33 0 3.578-1.498 3.578-3.703 0-2.455-1.54-3.537-3.703-3.537-2.33 0-3.578 1.623-3.578 3.662z"/>
+</svg>

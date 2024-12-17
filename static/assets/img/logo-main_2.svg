@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="284" height="58" fill="none" viewBox="0 0 284 58">
+  <defs>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel');
+    </style>
+  </defs>
+  <text 
+    x="10" 
+    y="50" 
+    fill="#333" 
+    font-family="Cinzel" 
+    font-size="56" 
+    font-weight="normal"
+    letter-spacing="2"
+  >
+    BELOVED
+  </text>
+</svg>
+
+

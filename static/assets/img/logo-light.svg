@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" fill="none" viewBox="0 0 40 35">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel&amp;display=swap');
+  </style>
+  <text 
+    x="5" 
+    y="28" 
+    fill="#fff" 
+    font-family="Cinzel" 
+    font-size="35"
+    font-weight="400">B</text>
+</svg>
