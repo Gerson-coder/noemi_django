@@ -1,26 +1,20 @@
 from django.shortcuts import render
+from product.models import Category
 
 # Create your views here.
 
 
 def home(request):
-    
-    return render(request, 'index.html')
 
-def product_store(request, category_id):
-    # Aquí puedes obtener los productos según la categoría
-    # Por ejemplo:
-    categories = {
-        1: {'name': 'tops', 'template': 'categories/tops.girls.html'},
-        2: {'name': 'dresses', 'template': 'categories/dresses_girls.html'},
-       
+    categories = Category.objects.filter(id__in=[1,2,3,4,5,6,7,8,9])
+    
+    
+
+    context ={
+        'categories':categories,
+        
     }
+
     
-    category = categories.get(category_id, {'name': 'Default', 'template': 'categories/default.html'})# pone como default si no encuentra
     
-    context = {
-        'category_name': category['name'],
-        # Aquí puedes agregar más datos para la vista
-    }
-    
-    return render(request, category['template'], context)
+    return render(request,'index.html', context)

@@ -1,127 +1,10 @@
-
+{% extends 'base.html' %}
 {% load static %}
+{% block title %}Beloved - Girls{% endblock %}
+{% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Beloved</title>
-
-    <!--== Favicon ==-->
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
-
-    <!--== Google Fonts ==-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,700,900,900i" rel="stylesheet">
-
-    <!--== Bootstrap CSS ==-->
-    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet"/>
-    <!--== Font-awesome Icons CSS ==-->
-    <link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet"/>
-    <!--== Icofont Min Icons CSS ==-->
-    <link href="{% static 'assets/css/icofont.min.css' %}" rel="stylesheet"/>
-    <!--== lastudioIcons CSS ==-->
-    <link href="{% static 'assets/css/lastudioIcons.css' %}" rel="stylesheet"/>
-    <!--== Animate CSS ==-->
-    <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet"/>
-    <!--== Aos CSS ==-->
-    <link href="{% static 'assets/css/aos.css' %}" rel="stylesheet"/>
-    <!--== FancyBox CSS ==-->
-    <link href="{% static 'assets/css/jquery.fancybox.min.css' %}" rel="stylesheet"/>
-    <!--== Slicknav CSS ==-->
-    <link href="{% static 'assets/css/slicknav.css' %}" rel="stylesheet"/>
-    <!--== Swiper CSS ==-->
-    <link href="{% static 'assets/css/swiper.min.css' %}" rel="stylesheet"/>
-    <!--== Slick CSS ==-->
-    <link href="{% static 'assets/css/slick.css' %}" rel="stylesheet"/>
-    <!--== Main Style CSS ==-->
-    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
-
-</head>
-
-<body>
-
-<!--wrapper start-->
-<div class="wrapper home-four-wrapper">
-
-  <!--== Start Preloader Content ==-->
-  <div class="preloader-wrap">
-    <div class="preloader">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <!--== End Preloader Content ==-->
-
-  <!--== Start Header Wrapper ==-->
-   <!--== Start Header Wrapper ==-->
-   <header class="header-area header-default header-transparent header-style5 sticky-header">
-    <div class="container-fluid">
-      <div class="row row-gutter-0 align-items-center">
-        <div class="col-4 col-xs-3 col-sm-3 col-md-3 col-xl-2 col-xxl-3">
-          <div class="header-logo-area">
-            <a href="index.html">
-              <img class="logo-main" src="{% static 'assets/img/logo-main-light_2.svg' %}" alt="Logo" />
-              <img class="logo-light" src="{% static 'assets/img/logo-main_2.svg' %}" alt="Logo" />
-            </a>
-          </div>
-        </div>
-        <div class="col-md-7 col-xl-7 col-xxl-6 d-none d-xl-block">
-          <div class="header-align">
-            <div class="header-navigation-area">
-              <ul class="main-menu nav justify-content-center position-relative">
-                <li><a href="{% url 'home' %}">NEW ARRIVALS</a>
-                  
-                </li>
-                <li><a href="{% url 'girls' %}">NIÑAS</a>
-
-                  <li><a href="{% url 'boys' %}">NIÑOS</a></li>
-                  <li ><a href="blog.html">SALE</a>
-               
-                
-                </ul>
-                </li>
-             
-              
-             
-            </div>
-          </div>
-        </div>
-        <div class="col-8 col-xs-9 col-sm-9 col-md-9 col-xl-3 col-xxl-3">
-          <div class="header-action-area">
-            <div class="header-action-search">
-              <button class="btn-search btn-search-menu">
-                <i class="lastudioicon-zoom-1"></i>
-              </button>
-            </div>
-            <div class="header-action-login">
-              <button class="btn-login" onclick="window.location.href='login.html'">
-                <i class="lastudioicon-single-01-2"></i>
-              </button>
-            </div>
-            <div class="header-action-cart">
-              <button class="btn-cart cart-icon">
-                <span class="cart-count">2</span>
-                <i class="lastudioicon-shopping-cart-2"></i>
-              </button>
-            </div>
-            <button class="btn-menu d-xl-none">
-              <i class="lastudioicon-menu-3-1"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!--== End Header Wrapper ==-->
   
   <main class="main-content">
     <!--== Start Hero Area Wrapper ==-->
@@ -820,78 +703,7 @@
     <!--== End Newsletter Area ==-->
   </main>
 
-  <!--== Start Footer Area Wrapper ==-->
-  <footer class="footer-area footer-style4">
-    <div class="footer-main">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="footer-logo-area">
-              <a href="index.html">
-                <img class="logo-main" src="{% static 'assets/img/logo-main-light_2.svg' %}" alt="Logo" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="row row-gutter-0">
-          <div class="col-sm-6 col-md-3 col-lg-3">
-            <div class="widget-item">
-              <h4>COMPRAR CON NOSOTROS</h4>
-              <nav class="widget-menu-wrap">
-                <ul class="nav-menu nav">
-                  <li><a href="shop-account.html">Mi Cuenta</a></li>
-                  <li><a href="shop.html">Envíos y Seguimiento</a></li>
-                  <li><a href="index.html">Devoluciones y Cambios</a></li>
-                  <li><a href="index.html">Promociones</a></li>
-                  <li><a href="index.html">Guía de Tallas</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3 col-lg-3">
-            <div class="widget-item ml-11 ml-xs-0 mt-xs-50">
-              <h4>ATENCIÓN AL CLIENTE</h4>
-              <nav class="widget-menu-wrap">
-                <ul class="nav-menu nav">
-                  <li><a href="index.html">Estado del Pedido</a></li>
-                  <li><a href="index.html">Membresías</a></li>
-                  <li><a href="faq.html">Preguntas Frecuentes</a></li>
-                  <li><a href="contact.html">Contáctenos</a></li>
-                  <li><a href="index.html">Educación Contra la Contrafacción</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3 col-lg-3">
-            <div class="widget-item ml-11 ml-xs-0 mt-sm-50">
-              <h4>SOBRE NOSOTROS</h4>
-              <nav class="widget-menu-wrap">
-                <ul class="nav-menu nav">
-                  <li><a href="index.html">Ubicación de la Tienda</a></li>
-                  <li><a href="index.html">Perfil de la Marca</a></li>
-                  <li><a href="index.html">Sostenibilidad</a></li>
-                  <li><a href="index.html">Opportunidades de Franquicia</a></li>
-                  <li><a href="index.html">Afiliados</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3 col-lg-3">
-            <div class="widget-item mt-sm-50">
-              <h4>EN REDES SOCIALES</h4>
-              <div class="widget-social-icons">
-                <a href="#/"><i class="lastudioicon lastudioicon-b-facebook"></i></a> 
-                <a class="mr-30" href="#/"><i class="lastudioicon lastudioicon-b-pinterest"></i></a> 
-                <a href="#/"><i class="lastudioicon lastudioicon-b-twitter"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!--== End Footer Area Wrapper ==-->
-  
+ 
   <!--== Scroll Top Button ==-->
   <div class="scroll-to-top"><span class="icofont-arrow-up"></span></div>
 
@@ -1081,49 +893,7 @@
   <!--== End Side Menu ==-->
 </div>
 
-<!--=======================Javascript============================-->
+{% endblock %}
 
-<!--=== Modernizr Min Js ===-->
-<script src="{% static 'assets/js/modernizr.js' %}"></script>
-<!--=== jQuery Min Js ===-->
-<script src="{% static 'assets/js/jquery-main.js' %}"></script>
-<!--=== jQuery Migration Min Js ===-->
-<script src="{% static 'assets/js/jquery-migrate.js' %}"></script>
-<!--=== Popper Min Js ===-->
-<script src="{% static 'assets/js/popper.min.js' %}"></script>
-<!--=== Bootstrap Min Js ===-->
-<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
-<!--=== jquery Appear Js ===-->
-<script src="{% static 'assets/js/jquery.appear.js' %}"></script>
-<!--=== jquery Swiper Min Js ===-->
-<script src="{% static 'assets/js/swiper.min.js' %}"></script>
-<!--=== jquery Fancybox Min Js ===-->
-<script src="{% static 'assets/js/fancybox.min.js' %}"></script>
-<!--=== jquery Aos Min Js ===-->
-<script src="{% static 'assets/js/aos.min.js' %}"></script>
-<!--=== jquery Slicknav Js ===-->
-<script src="{% static 'assets/js/jquery.slicknav.js' %}"></script>
-<!--=== jquery Countdown Js ===-->
-<script src="{% static 'assets/js/jquery.countdown.min.js' %}"></script>
-<!--=== jquery Tippy Js ===-->
-<script src="{% static 'assets/js/tippy.all.min.js' %}"></script>
-<!--=== Isotope Min Js ===-->
-<script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
-<!--=== jquery Vivus Js ===-->
-<script src="{% static 'assets/js/vivus.js' %}"></script>
-<!--=== Parallax Min Js ===-->
-<script src="{% static 'assets/js/parallax.min.js' %}"></script>
-<!--=== Slick  Min Js ===-->
-<script src="{% static 'assets/js/slick.min.js' %}"></script>
-<!--=== jquery Wow Min Js ===-->
-<script src="{% static 'assets/js/wow.min.js' %}"></script>
-<!--=== jquery Zoom Min Js ===-->
-<script src="{% static 'assets/js/jquery-zoom.min.js' %}"></script>
 
-<!--=== Custom Js ===-->
-<script src="{% static 'assets/js/custom.js' %}"></script>
-
-</body>
-
-</html>
 

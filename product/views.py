@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.shortcuts import get_object_or_404
+from .models import Category
 
 # Create your views here.
 
@@ -15,18 +17,17 @@ def products_boys(request):
 def product_store(request, category_id):
     # Aquí puedes obtener los productos según la categoría
     # Por ejemplo:
-    categories = {
-        1: {'name': 'tops', 'template': 'categories/tops_girls.html'},
-        2: {'name': 'dresses', 'template': 'categories/dresses_girls.html'},
-       
-    }
+    categoria  = get_object_or_404(Category,id = category_id)
     
-    category = categories.get(category_id, {'name': 'Default', 'template': 'categories/default.html'})# pone como default si no encuentra
-    
-    context = {
-        'category_name': category['name'],
-        # Aquí puedes agregar más datos para la vista
-    }
-    
-    return render(request, category['template'], context)
 
+    print(f'Category id received: {category_id}'),
+    print(f'Category name: {Category.name}'),
+    print(f'Category id type: {type(category_id)}'),
+   # Pasa el contexto al template
+    context = {
+      
+        'category_name': categoria.name,
+    }
+    
+    # Renderiza el template correspondiente
+    return render(request, categoria.template, context)

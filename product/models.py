@@ -9,6 +9,7 @@ from django.core.exceptions import ValidationError
 class Category(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField("Nombre", max_length=50, unique=True)
+    template = models.CharField('Template',max_length=100,blank=True,null=True,default='categories/default.html')
     description = models.TextField("Descripción", blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
