@@ -99,7 +99,7 @@
             <!-- Start Product Item -->
             <div class="product-item">
               <div class="product-thumb">
-                <a href="">
+                <a href="{% url 'product_detail' 1 %}">
                   <img src="{% static 'assets/img/shop/d1-1-ger.jpg' %}" alt="Moren-Shop">
                   <span class="bg-thumb" data-bg-img="{% static 'assets/img/shop/d1-2.jpg' %}"></span>
                   <span class="thumb-overlay"></span>
@@ -108,7 +108,7 @@
                   <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
                     <i class="lastudioicon-search-zoom-in"></i>
                   </a>
-                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
+                  <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="{% url 'product_detail' 1 %}" title="Add to compare">
                     <i class="lastudioicon-compare"></i>
                   </a>
                 </div>
@@ -136,7 +136,7 @@
             <!-- Start Product Item -->
             <div class="product-item">
               <div class="product-thumb">
-                <a href="shop-single-product.html">
+                <a href="{% url 'product_detail' 2 %}">
                   <img src="{% static 'assets/img/shop/d2-1-ger.jpg' %}" alt="Moren-Shop">
                   <span class="bg-thumb" data-bg-img="{% static 'assets/img/shop/d2-2-ger.jpg' %}"></span>
                   <span class="thumb-overlay"></span>
@@ -173,7 +173,7 @@
             <!-- Start Product Item -->
             <div class="product-item">
               <div class="product-thumb">
-                <a href="shop-single-product.html">
+                <a href="{% url 'product_detail' 3 %}">
                   <img src="{% static 'assets/img/shop/prueba.jpg' %}" alt="Moren-Shop">
                   <span class="bg-thumb" data-bg-img="{% static 'assets/img/shop/d3-2.jpg' %}"></span>
                   <span class="thumb-overlay"></span>
@@ -222,7 +222,7 @@
               </div>
               <div class="content">
                 <div class="inner-content">
-                  <h4 class="title">{{categories.name_1}}</h4>
+                  <h4 class="title">{{category_1.name}}</h4>
                   <div class="meta">
                     <a href="shop.html">Midi</a>
                     <a href="shop.html">Maxi</a>
@@ -275,7 +275,7 @@
               </div>
               <div class="content">
                 <div class="inner-content">
-                  <h4 class="title">Brazers | Jackets</h4>
+                  <h4 class="title">{{category_4.name}}</h4>
                   <div class="meta">
                     <a href="shop.html">Midi</a>
                     <a href="shop.html">Maxi</a>
@@ -292,7 +292,7 @@
               </div>
               <div class="content">
                 <div class="inner-content">
-                  <h4 class="title">T-SHIRTS</h4>
+                  <h4 class="title">{{category_5.name}}</h4>
                   <div class="meta">
                     <a href="shop.html">Midi</a>
                     <a href="shop.html">Maxi</a>
@@ -322,7 +322,7 @@
                       </div>
                       <div class="content">
                         <div class="inner-content">
-                          <h4 class="title">PANTS | JEANS</h4>
+                          <h4 class="title">{{category_6.name}}</h4>
                           <div class="meta">
                             <a href="shop.html">Midi</a>
                             <a href="shop.html">Maxi</a>
@@ -339,7 +339,7 @@
                       </div>
                       <div class="content">
                         <div class="inner-content">
-                          <h4 class="title">SHORTS | SKIRTS</h4>
+                          <h4 class="title">{{category_7.name}}</h4>
                           <div class="meta">
                             <a href="shop.html">Jumpsuits</a>
                             <a href="shop.html">Mini</a>
@@ -358,7 +358,7 @@
                       </div>
                       <div class="content">
                         <div class="inner-content">
-                          <h4 class="title">BAGS</h4>
+                          <h4 class="title">{{category_8.name}}</h4>
                           <div class="meta">
                             <a href="shop.html">Midi</a>
                             <a href="shop.html">Maxi</a>
@@ -375,7 +375,7 @@
                       </div>
                       <div class="content">
                         <div class="inner-content">
-                          <h4 class="title">Accessories</h4>
+                          <h4 class="title">{{category_9.name}}</h4>
                           <div class="meta">
                             <a href="shop.html">Midi</a>
                             <a href="shop.html">Maxi</a>

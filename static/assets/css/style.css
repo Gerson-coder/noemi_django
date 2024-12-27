@@ -20014,3 +20014,109 @@ table p {
 .home-seven-wrapper .footer-area.footer-style7 .footer-main .widget-item h4 {
   font-family: "Mukta", sans-serif;
 }
+
+.not-available {
+  opacity: 0.5;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+
+/* Contenedor principal */
+.product-action-size {
+  margin: 10px 0;
+}
+
+.product-action-size .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Opciones de tallas */
+.size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.size-option {
+  position: relative;
+  display:flex;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.size-option:hover {
+  border-color: #000;
+  transform: scale(1.05);
+}
+
+/* Opciones seleccionadas */
+.size-option.selected {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+  transform: scale(3.2);
+}
+
+/* Opciones deshabilitadas */
+.size-option.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #ddd;
+}
+
+.size-option.disabled:hover {
+  transform: none;
+  border-color: #ddd;
+}
+
+/* Etiqueta de "No disponible" */
+.size-option .size-unavailable {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #f44336;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5px;
+}
+
+/* Feedback para la talla seleccionada */
+.selected-size-feedback {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.selected-size-feedback #selected-size-text {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .size-option {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .selected-size-feedback {
+    font-size: 0.9rem;
+  }
+}

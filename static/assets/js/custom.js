@@ -497,45 +497,28 @@
   });
 
   // Product Qty
-  var proQty = $(".pro-qty");
-  proQty.append('<a href="#" class="inc qty-btn">+</a>');
-  proQty.append('<a href="#" class= "dec qty-btn">-</a>');
-  $('.qty-btn').on('click', function(e) {
-    e.preventDefault();
-    var $button = $(this);
-    var oldValue = $button.parent().find('input').val();
-    if ($button.hasClass('inc')) {
-      var newVal = parseFloat(oldValue) + 1;
-    } else {
-      // Don't allow decrementing below zero
-      if (oldValue > 1) {
-        var newVal = parseFloat(oldValue) - 1;
+  $(document).ready(function () {
+    // Pro Qty General
+    $(".pro-qty, .pro-qty2").each(function () {
+      // Agregar botones solo una vez
+      $(this).append('<a href="#" class="inc qty-btn">+</a>');
+      $(this).append('<a href="#" class="dec qty-btn">-</a>');
+    });
+  
+    // Delegar el evento para evitar duplicados
+    $('body').on('click', '.qty-btn', function (e) {
+      e.preventDefault(); // Evita el comportamiento por defecto del enlace
+  
+      var $button = $(this); // Botón clicado
+      var $input = $button.siblings('input'); // Campo de input dentro del mismo contenedor
+      var oldValue = parseInt($input.val(), 10) || 1; // Convertir valor a entero (por defecto 1)
+  
+      if ($button.hasClass('inc')) {
+        $input.val(oldValue + 1); // Incrementa
       } else {
-        newVal = 1;
+        $input.val(Math.max(1, oldValue - 1)); // Decrementa pero nunca baja de 1
       }
-    }
-    $button.parent().find('input').val(newVal);
-  });
-
-  // Product Qty
-  var proQty2 = $(".pro-qty2");
-  proQty2.append('<a href="#" class= "dec qty-btn">(-)</a>');
-  proQty2.append('<a href="#" class="inc qty-btn">(+)</a>');
-  $('.qty-btn').on('click', function(e) {
-    e.preventDefault();
-    var $button2 = $(this);
-    var oldValue2 = $button2.parent().find('input').val();
-    if ($button2.hasClass('inc')) {
-      var newVal2 = parseFloat(oldValue2) + 1;
-    } else {
-      // Don't allow decrementing below zero
-      if (oldValue2 > 1) {
-        var newVal2 = parseFloat(oldValue2) - 1;
-      } else {
-        newVal2 = 1;
-      }
-    }
-    $button2.parent().find('input').val(newVal2);
+    });
   });
 
   //Checkout Page Checkbox Accordion
@@ -668,3 +651,25 @@
   
 
 })(window.jQuery);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sizeOptions = document.querySelectorAll(".size-option");
+  const feedback = document.getElementById("selected-size-text");
+
+  sizeOptions.forEach((option) => {
+    // Evento para selección
+    option.addEventListener("click", function () {
+      if (this.dataset.stock === "true") {
+        // Limpiar selecciones previas
+        sizeOptions.forEach((opt) => opt.classList.remove("selected"));
+        // Marcar como seleccionado
+        this.classList.add("selected");
+        // Actualizar feedback visual
+        feedback.textContent = this.dataset.size;
+      } else {
+        alert("Esta talla no está disponible actualmente.");
+      }
+    });
+  });
+});

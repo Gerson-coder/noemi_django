@@ -69,7 +69,8 @@ class Product(models.Model):
     marca = models.ForeignKey(Marca, on_delete=models.CASCADE, blank= True, null=True)
     discount_price = models.DecimalField("Precio con descuento", max_digits=10, decimal_places = 2,blank=True,null=True)
     sold_count = models.IntegerField("Cantidad vendida", blank=True, null=True)
-    is_featured = models.BooleanField("Es destacado", default=False)
+    is_featured = models.BooleanField("Mas vendido", default=False)
+    is_new = models.BooleanField('Nuevo ingreso',default=False)
     image = models.ImageField(upload_to="Product")
     created_at = models.DateField(auto_now=False, auto_now_add= True)
     updated_at = models.DateField(auto_now=True,auto_now_add=False)
@@ -122,3 +123,17 @@ class ProductStock(models.Model):
     
     def __str__(self):
         return f"{self.product.name} - {self.color.name} - {self.size.name}"
+    
+
+def product_image_upload_path(instance, filename):
+    # Retornar la ruta dinámica basada en el ID del producto
+    return f'products/{instance.product.id}/{filename}'
+class ProductImage(models.Model):
+    name = models.CharField('nombre',max_length=30,null=True)
+    product = models.ForeignKey(Product, related_name='images', on_delete=models.CASCADE,null=True)
+    image = models.ImageField(upload_to=product_image_upload_path)
+
+    def __str__(self):
+        return self.name
+    
+

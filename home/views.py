@@ -11,10 +11,17 @@ def home(request):
     
 
     context ={
-        'categories':categories,
+        'category_1': categories.filter(id=1).first(),
+        'category_2': categories.filter(id=2).first(),
+        'category_3': categories.filter(id=3).first(),
+        'category_4': categories.filter(id=4).first(),
+        'category_5': categories.filter(id=5).first(),
+        'category_6': categories.filter(id=6).first(),
+        'category_7': categories.filter(id=7).first(),
+        'category_8': categories.filter(id=8).first(),
+        'category_9': categories.filter(id=9).first(),
+       
         
     }
 
-    
-    
     return render(request,'index.html', context)

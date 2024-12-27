@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product, Marca, Color, Size, ProductStock
+from .models import Category, Product, Marca, Color, Size, ProductStock,ProductImage
 
 
 @admin.register(Color)  # Registrar Color una vez
@@ -41,3 +41,5 @@ class MarcaAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Category)
+admin.site.register(ProductImage)
+admin.site.register(ProductStock)
