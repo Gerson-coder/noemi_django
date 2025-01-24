@@ -1,0 +1,1 @@
+web gunicorn noemi_store.wsgi
